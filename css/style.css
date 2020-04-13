@@ -1,0 +1,718 @@
+/* General css style*/
+*
+{
+   margin:0;
+   padding: 0;
+   box-sizing:border-box; /*css3*/
+}
+.container
+{
+    width:80%;
+    
+    
+    margin: auto;
+}
+body
+{
+    font-family: 'Varela Round', sans-serif;
+}
+button
+{
+    font-family: 'Varela Round', sans-serif;
+}
+.clear
+{
+    clear: both;
+}
+.pd-y
+{
+   padding: 120px 0;
+}
+.section-header
+{
+   text-align: center;
+   
+}
+.section-header .section-title
+{
+   font-size: 37px;
+   text-transform: capitalize;
+   margin-bottom: 10px;
+}
+.section-header .line
+{
+   display: block;
+   margin:0 auto 70px auto;
+   height: 3.5px;
+   width: 44px;
+   background: #6195ff;
+}
+.ltr-effect
+{
+   position: relative;
+}
+.ltr-effect:after
+{
+   position: absolute;
+   content: "";
+   width: 0;
+   top:0;
+   left: 0;
+   right:0;
+   bottom:0;
+   background: #333;
+   transition: width 0.3s;
+   z-index: -1;
+   
+}
+.ltr-effect:hover:after
+{
+   width: 100%;   
+}
+/* Header */
+.header
+{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+    height: 75px;
+}
+/*.header-content
+{
+    overflow: hidden;
+}*/
+.header .logo
+{
+    width: 40%;
+    float: left;
+}
+.header .logo img
+{
+    width:20%;
+    margin-top: 15px;
+}
+.header .nav
+{
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+.header .nav > li
+{
+    display: inline-block;
+    text-align:right;
+
+}
+.header .nav > li > a
+{
+    text-decoration: none;
+    color: white;
+    padding: 30px 15px;
+    display: block;
+    font-size: 15px;
+}
+.header .nav > li > a.active:after,
+.header .nav > li > a:after
+{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #6195ff;
+    transition: 0.3s;
+}
+
+.header .nav > li > a.active:after
+{
+        width: 100%;
+}
+.header .nav > li > a:after
+{
+
+    width: 0;
+ 
+}
+.header .nav > li > a:hover:after
+{
+    width: 100%;
+}
+.drobdown
+{
+    position: relative;
+}
+.drobdown-menu
+{
+    position: absolute;
+    background: #6195ff;
+    width: 150px;
+    border-radius:15px;
+    text-align: center;
+    left:-50%;
+    top:80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ;
+}
+.drobdown-menu a
+{
+    color:#fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.drobdown:hover .drobdown-menu
+{
+    opacity: 1;
+    visibility: visible;
+}
+/* Home section*/
+.home
+{
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size:cover;
+    position: relative;
+}
+.home-content
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 65%;
+}
+.home .title
+{
+    color:#fff;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    font-family: monserrat,sans-serif;
+}
+.home .home-describtion
+{
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+.home .btn
+{
+    width: 160px;
+    height: 45px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    
+}
+.home .btn-start
+{
+    background-color: #fff;
+}
+.home .btn-learn
+{
+    background-color: #6195ff;
+    color: #fff;
+}
+.overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.8);
+    
+}
+.hover-opacity
+{
+    transition: opacity 0.2s;
+}
+.hover-opacity:hover
+{
+    opacity: 0.8;
+}
+/* About section*/
+.about
+{
+   
+}
+.about-content
+{
+   overflow: hidden;
+}
+.about-item
+{
+   width: 30%;
+   float: left;
+   text-align: center;
+   border: 1px solid #e8e8e8;
+   padding: 50px 20px;
+   
+}
+.about-item:hover .about-item-title
+{
+   color:#fff;
+}
+.about-item.mg
+{
+   margin: 0 5% ;
+}
+.about-item .icon
+{
+   color:#6195ff;
+   margin-bottom: 15px;
+}
+.about-item-title
+{
+   text-transform: capitalize;
+   margin-bottom: 10px;
+   transition: 0.5s;
+}
+.about-item-describtion
+{
+   line-height: 1.6;
+   margin-bottom: 10px;
+   color: #999;
+}
+.about-item-link
+{
+   color:#6195ff;
+   text-transform: capitalize;
+   text-decoration: none;
+}
+
+
+
+
+
+/* Portfolio section*/
+.portfolio
+{
+   background:#f9f9f9; 
+}
+.portfolio-content
+{
+   overflow: hidden;
+}
+.portfolio-item
+{
+   float: left;
+   width: 30%;
+   margin-bottom: 50px;
+   position: relative;
+   padding: 20px;
+}
+.portfolio-item .layer-content
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background:rgba(0,0,0,0.5);
+   opacity: 0;
+   visibility:hidden;
+   transition: opacity 0.5s ;
+}
+.portfolio-item:hover .layer-content
+{
+   opacity: 1;
+   visibility: visible;
+}
+.layer-content .layer-info
+{
+   position: absolute ;
+   left: 50%;
+   top: 50%;
+   width: 80%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.layer-content .category
+{
+   color:#6195ff;
+   font-size: 18px;
+   text-transform: uppercase;
+   display: block;
+   margin-bottom: 5px;
+   position: relative;
+   top:10px;
+   transition: top 0.3s ;
+   transition-delay: 0.2s;
+   opacity: 0;
+
+}
+.layer-content-title
+{
+   font-size: 20px;
+   color:#fff;
+   margin-bottom: 10px;
+   position: relative;
+   top:10px;
+   transition: top 0.3s ;
+   transition-delay:0.3s;
+   opacity: 0;
+}
+.layer-content a
+{
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background-color: #6195ff;
+   position: relative;
+   top:10px;
+   transition: top 0.3s;
+   transition-delay: 0.3s;
+   opacity: 0;
+}
+
+.layer-content a i
+{
+   line-height: 40px;
+   color: #fff;
+}
+.portfolio-item:hover .layer-content .category,
+.portfolio-item:hover .layer-content-title,
+.portfolio-item:hover .layer-content a
+{
+   top:0;
+   opacity: 1;
+   
+}
+
+.portfolio-item.mg
+{
+   margin: 0 5%;
+}
+
+.portfolio-item img
+{
+   width: 100%;
+}
+
+/* Offer section*/
+.offer
+{
+   
+}
+.offer-content
+{
+   overflow: hidden;
+
+}
+.offer-item
+{
+   width: 30%;
+   float: left;
+   margin-bottom:  20px ;
+   border: 1px solid #e8e8e8;
+   padding: 30px 15px 30px 70px;
+   position: relative;
+}
+.offer-item.mg
+{
+   margin:0 5%;
+}
+.offer-item .icon
+{
+   position: absolute;
+   left:20px;
+   top:30px;
+   color: #6195ff;
+}
+.offer-item-title
+{
+   text-transform: capitalize;
+   margin-bottom: 15px;
+   transition: color 0.1s;
+   
+}
+.offer-item-desc
+{
+   text-transform: capitalize;
+   margin: 15px;
+   line-height: 1.6;
+   color: #999;
+}
+.offer-item:hover .offer-item-title
+{
+   color: #fff;
+}
+
+/* Service Section */
+.service
+{
+   background-color: #f9f9f9; 
+}
+.service-item
+{
+   width: 50%;
+   float: left;
+}
+.service-item .section-header
+{
+   text-align: left;
+}
+.service-item .section-header .line
+{
+   margin:0 0 50px 0;
+}
+.service-item-desc
+{
+   padding: 20px;
+   color: #999;
+   line-height: 1.8;
+   font-size:14px;
+   margin-bottom: 20px;
+   
+}
+.service-list
+{
+   list-style: none;
+}
+.service-list li 
+{
+   margin-bottom: 10px;
+   color: #999;
+}
+.service-list li i
+{
+   border: 1px solid #6195ff;
+   color: #6195ff;
+   width: 30px;
+   height: 30px;
+   padding: 7px;
+   border-radius: 50%;
+}
+.service-item img
+{
+   width: 100%;
+}
+.service-bollets
+{
+   list-style: none;
+   text-align: center;
+}
+.service-bollets li
+{
+   width:10px;
+   height: 10px;
+   display: inline-block;
+   background-color:#999 ;
+   margin: 10px 5px;
+   border-radius: 50%;
+}
+.service-bollets li.active
+{
+   background-color: #6195ff;
+}
+.service-bollets li:hover
+{
+     background-color: #6195ff;
+}
+
+/* Numbers section*/
+.numbers
+{
+   position: relative;
+   background-image: url("../images/background/background2.webp");
+   background-size: cover;
+   background-attachment: fixed;
+   height: 300px;
+   margin-bottom: 150px;
+}
+.numbers-items
+{
+   overflow: hidden;
+   padding: 100px 0 ;
+}
+.number-item
+{
+   width: 25%;
+   float: left;
+   text-align: center;
+   
+}
+.number-item .icon
+{
+   color: #6195ff;
+   margin-bottom: 15px;
+}
+.number-item-title
+{
+   font-weight: bold;
+   font-size: 25px;
+   margin-bottom: 15px;
+   color: white;
+}
+.number-item-text
+{
+   color: white;
+   
+}
+/* testimonail section*/
+.testimonial
+{
+   position: relative;
+   background-image: url(../images/background/background3.webp);
+   background-size: cover;
+   background-attachment: fixed;
+   height: 400px;
+   margin-bottom: 100px;
+}
+.testimonial-content
+{
+   overflow: hidden;
+   padding: 135px 0 ;
+}
+.testimonial-item
+{
+   width: 50%;
+   float: left;
+   color: #fff;
+   
+}
+.testimonial-item .testimonial-toplayer
+{
+   padding: 10px 2px 40px 90px;
+   position: relative;
+}
+.testimonial-item .testimonial-toplayer img
+{
+   position: absolute;
+   left:0;
+   top:10px;
+   border-radius: 50%;
+
+}
+.testimonial-item .testimonial-toplayer h2
+{
+   margin-bottom: 8px;
+   
+}
+.testimonial-item .testimonial-toplayer span
+{
+   color: #6195ff;
+}
+.testimonial-item p
+{
+   line-height: 1.5;
+   width: 90%;
+   font-size: 17px;
+}
+/* Blog section*/
+.blog
+{
+   background: #f8f8f8;
+}
+.blog-content
+{
+   overflow: hidden;
+  
+}
+.blog-item
+{
+   width: 30%;
+   float: left;
+   background: #fff;
+}
+.blog-item img
+{
+   width:100%;
+}
+.blog-list
+{
+   list-style: none;
+   margin: 7px 0 10px 0;
+
+}
+.blog-list li
+{
+   display: inline-block;
+
+   margin: 0 5px 10px 0;
+   color: #6195ff;
+}
+.blog-info
+{
+   padding: 15px;
+}
+.blog-title
+{
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+.blog-desc
+{
+   line-height: 1.4;
+   color: #888;
+   margin-bottom: 15px;
+}
+.blog-link
+{
+   text-decoration: none ;
+   color:#6195ff;
+}
+.blog-item.mg
+{
+   margin: 0 5%;
+}
+/* Contact section*/
+
+/* Footer Section*/
+.footer
+{
+   background: #1c1d21;
+   text-align: center;
+   height: 340px;
+   padding: 80px;
+}
+.footer img
+{
+   margin-bottom: 30px;
+}
+.footer-links
+{
+   list-style: none;
+   margin: 20px 0 ;
+
+}
+.footer-links li
+{
+   display: inline-block;
+   margin-right: 10px;
+
+}
+.footer-links li a
+{
+   display: block;
+   width: 50px;
+   height: 50px;
+   background: #6195ff;
+   color: #fff;
+   border-radius: 4px;
+   opacity: 1;
+   transition: opacity 0.5s;
+}
+.footer-links li a:hover
+{
+   opacity: 0.7;
+}
+.footer-links li a i
+{
+   line-height: 50px;
+}
+.footer-desc
+{
+   color: #888;
+}
+.footer-desc a
+{
+   text-decoration: none;
+   color: #6195ff;
+}
